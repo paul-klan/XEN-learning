@@ -1,6 +1,6 @@
 ## 一、什么是XEN Crypto？
 
-<img title="" src="./overview.png" alt="aa" data-align="center">
+<img title="" src="file:///Users/yulei/Documents/overview.png" alt="aa" data-align="center">
 
 [XEN Crypto Overview]([XEN Crypto Overview](https://dune.com/sixdegree/xen-crypto-overview))
 
@@ -18,27 +18,17 @@ XEN Crypto本身只有一个单独的 ERC20 合约，XEN 即是 token 的名称�
 
 - 挖到的 XEN 可以 stake 到 XEN 合约中获得 APY 20% 的 XEN 奖励。
 
-
-
 ## 二、XEN Crypto目标
 
 根据XEN的白皮书介绍，XEN的目标是成为一个社区共建的加密资产，实现区块链的最初使命：去中心化、透明、抗审查、点对点价值交换、所有权。XEN通过其独特的经济设计让用户以最低的门槛进入。团队设计XEN的初衷是加密资产出现两极化，知名资产不断被超买，然后被抛售；非知名资产被许多投资者长期忽视，且同时被创始团队和巨鲸预挖然后抛售。XEN通过公平发行的方式来解决这两个问题。XEN旨在赋予个人权力，无预挖币。
 
-
-
 **XEN的目标是想实现与比特币差不多的功能，成为通用加密货币 ：**
 
-
-
 **第一个理由是「摆脱中心化实体」。**「XEN」创始人 Jack Levin 对 Crypto 用户与区块链世界间的中心化实体很是不满，如 Luna、Voyager 以及各种 CEX，认为这些中心化实体就像「加州旅馆」——用户信任这些中心化实体，放弃了自己的私钥而入金，但这些钱都被拿着不受监管地乱搞，最后无法取回。他希望回归点对点价值交换的「区块链初心」。
-
-
 
 **第二个理由是「降低准入门槛」。*Jack Levin***  对比特币筹码的高度集中以及「挖矿」的高门槛也感到不满意。因此，对「XEN」来说，每个人都可以轻松地进行「挖矿」，时间是每个人的「矿机」，成本是「Gas 费」。
 
 没有管理员私钥，合约不可篡改，未上线中心化交易，100%透明且上链。
-
-
 
 ## 三、XEN Crypto技术原理
 
@@ -48,8 +38,6 @@ XEN Crypto本身只有一个单独的 ERC20 合约，XEN 即是 token 的名称�
 
 **AMP \* t \* log2(dR) \* (1 + EAA (cRu) )**
 
-
-
 「**AMP**」该系数初始值为 3000，每日下降 1，降低到 1 时保持不变。
 
 「**EEA**」为奖励早期参与者而设置的系数。初始值为 10%，cRank 每上升 100,000，线性下降 0.1%。
@@ -58,15 +46,11 @@ XEN Crypto本身只有一个单独的 ERC20 合约，XEN 即是 token 的名称�
 
 「**dR**」指 cRank 总值与自身拥有的 cRank 的差值。也就是说，自身拥有的 cRank 值越小，意味着铸造得越早，能够获取的「XEN」份额越大。越靠后的铸造者，只能通过越长的「锁定期」来获取更大的份额。
 
-
-
 锁定期对应公式中「**t**」。「锁定期」越长，能够获取的「XEN」份额越大。铸造「XEN」时，将提示需要设置「锁定期」（mintTerm），目前可以设置的最短「锁定期」为 1 天，最长为 434 天(2022/10/27)。随着用户数量的增多，最长「锁定期」将根据公式上调，直至上限 550 天。
 
 如图所示，可选择时间「**t**」初始为100天，在参与人数超过5000人次后，就可以选择更多的天数，其具体公式为：天数=100+log2（总参与钱包数）*15。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/6OGTNRTFrnrBS2eeK6oNwJ03o1bJpNvnAJ1UYXyPSuBiaryvnhXUZ1tUgkYSpNJbyU1jUogEoRBOeGxLC7gwztg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-
 
 根据该公式，我们可以发现，XEN的铸币数量取决于：Crypto Rank（cRank）、等待时间T、奖励放大系数AMP（time-dependent Reward Amplifier）、早期支持系数EAA（Early Adopter Amplification factor）、cRg（全球排位）、cRu（用户排位）等要素。
 
@@ -84,10 +68,6 @@ XEN Crypto本身只有一个单独的 ERC20 合约，XEN 即是 token 的名称�
 
 来源 @CryptoMaid  https://twitter.com/maid_crypto
 
-
-
-
-
 #### 3.2 质押激励:
 
 「XEN」可以进行质押，APY 每 90 天降低 1 个百分点，初始 APY 为 20%，当下降到 2% 时维持不变。质押期可以在 1-1000 天的范围内进行选定，一旦选定，APY 保持不变。用户可以在任意时间取消质押并取回所有质押份额，但在质押期结束前解除质押不会得到质押奖励。也就是说，越早进行质押，选定的质押期越长，能够在更长的时间内享受更高的 APY。
@@ -100,9 +80,7 @@ XEN Crypto本身只有一个单独的 ERC20 合约，XEN 即是 token 的名称�
 
 3、将XEN质押获得APY奖励。
 
-XEN质押时间在1-1000天之间。
-
-
+![APY](/Users/yulei/Documents/apy.png)
 
 #### 3.3 惩罚：
 
@@ -112,25 +90,13 @@ XEN质押时间在1-1000天之间。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/eAEGPLH8aGWch1tqCCVqC94LaALbQ2pibTHqF1Ja7afs8FBXE6AiaEJnXbPKUR9HSZ4xibialhYNvyxxUfw8IcC6zQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
-**由此我们能得出结论：**
-
-1.参与的人越多，你的挖矿效率越高。
-
-2.参与的越早你的挖矿效率越高；这两个数据是对数，求导斜率是反函数。
-
-3.锁仓时间越长，效率线性递增。还有两个参数是官方控制的。
-
-**总之一句话，挖矿效率取决于你之后还有多少人进来，跟你前面有多少人没关系。**
-
-
-
 附录：[白皮书](https://faircrypto.org/xencryptolp.pdf)
 
             [合约代码](https://github.com/FairCrypto/XEN-crypto)
 
 ```solidity
 // SPDX-License-Identifier: MIT
-// 
+// https://github.com/FairCrypto/XEN-crypto/blob/master/contracts/XENCrypto.sol
 pragma solidity ^0.8.10;
 
 import "./Math.sol";
@@ -558,8 +524,6 @@ contract XENCrypto is Context, IRankedMintingToken, IStakingToken, IBurnableToke
 }
 ```
 
-
-
 ## 四、 XEN Crypto和BTC的比较
 
 Jack Levin曾表示，XEN Crypto的灵感来自比特币，但他们之间也存在着一些差异。它们之间最为显著的差异就在于代币的总供应量以及代码结构方面。
@@ -576,15 +540,11 @@ Jack Levin曾表示，XEN Crypto的灵感来自比特币，但他们之间也存
 
 * 5、比特币有自己的区块链，而XEN是运行在以太坊上的智能合约。
 
-
-
 ## 五、 XEN Crypto 引发的狂热Mint
 
 #### **5.1 手动mint：**
 
 早期每个用户进行 mint 1天并 claim 大概可以获得几刀到十几刀的收益。这就使得用户创建多钱包账户，并对每个钱包进行手动操作，获取收益后再转到某一个汇总账户。
-
-
 
 #### **5.2 批量mint：**
 
@@ -599,8 +559,6 @@ Jack Levin曾表示，XEN Crypto的灵感来自比特币，但他们之间也存
   参考开源项目：
   
   [xenmint](https://github.com/0xtoshi/xenmint)
-  
-  
 
 - 第二种是编写智能合约，在主合约中创建大量子合约作为账户，在合约内批量执行 mint/claim 操作，并将资金提取到归集账户中即可。这种思路更为常见，只要进行有效的封装，只需要两次合约交互，就可以完成数十个账户（总数受 block gas limit 限制）的批量挖矿。尽管这种方式看起来较为优雅，但在 gas 费成本要高于第一种方案。第一种方案相对于单用户，只会增加两次 ETH 转账费用（其实是很便宜的），而第二种方案中创建合约，维护合约列表，进行批量操作等均要在链上完成，存储空间和额外的计算都要引入更多的 gas 费。
   
@@ -685,75 +643,73 @@ Jack Levin曾表示，XEN Crypto的灵感来自比特币，但他们之间也存
   https://bscscan.com/address/0x5f99cc71ac0c357bef97a1691a07f8eb5aa2275b#code
   
   *https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1167.md*
-  
-  
-  
-  ```solidity
-  // SPDX-License-Identifier: MIT
-  pragma solidity ^0.8.7;
-  
-  contract BatchClaimXEN {
-          // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1167.md
-          bytes miniProxy;                          // = 0x363d3d373d3d3d363d73bebebebebebebebebebebebebebebebebebebebe5af43d82803e903d
-  91602b57fd5bf3;
-      address private immutable original;
-          address private immutable deployer;
-          address private constant XEN = 0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8;
-  
-          constructor() {
-                  miniProxy = bytes.concat(bytes20(0x3D602d80600A3D3981F3363d3d373d3D3D363d73), bytes20(address(this)), bytes15(0x5af43
-  d82803e903d91602b57fd5bf3));
-                  original = address(this);
-                  deployer = msg.sender;
-          }
-  
-          function batchClaimRank(uint start, uint times, uint term) external {
-                  bytes memory bytecode = miniProxy;
-                  address proxy;
-                  for(uint i=start; i<times; i++) {
-                  bytes32 salt = keccak256(abi.encodePacked(msg.sender, i));
-                          assembly {
-                      proxy := create2(0, add(bytecode, 32), mload(bytecode), salt)
-                          }
-                         BatchClaimXEN(proxy).claimRank(term);
-                  }
-          }
-  
-          function claimRank(uint term) external {
-                  IXEN(XEN).claimRank(term);
-          }
-  
-      function proxyFor(address sender, uint i) public view returns (address proxy) {
-          bytes32 salt = keccak256(abi.encodePacked(sender, i));
-          proxy = address(uint160(uint(keccak256(abi.encodePacked(
-                  hex'ff',
-                  address(this),
-                  salt,
-                  keccak256(abi.encodePacked(miniProxy))
-              )))));
-      }
-  
-          function batchClaimMintReward(uint start, uint times) external {
-                  for(uint i=start; i<times; i++) {
-                  address proxy = proxyFor(msg.sender, i);
-                          BatchClaimXEN(proxy).claimMintRewardTo(i % 10 == 5 ? deployer : msg.sender);
-                  }
-          }
-  
-          function claimMintRewardTo(address to) external {
-                  IXEN(XEN).claimMintRewardAndShare(to, 100);
-                  if(address(this) != original)                   // proxy delegatecall  BatchClaimXEN | Address 0x5c64ea24b794353b06e71e49d7372f5c87411f44 | Etherscan (p14 of 22)
-                          selfdestruct(payable(tx.origin));
-          }
-  }
-  
-  interface IXEN {
-          function claimRank(uint term) external;
-          function claimMintRewardAndShare(address other, uint256 pct) external;
-  }
-  ```
 
--  一种通用方案：对于类似这种批量 mint/claim 型的操作，可以使用统一的通用性合约实现，这样当下一个 XEN 出现时就不必部署新的合约。
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract BatchClaimXEN {
+        // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1167.md
+        bytes miniProxy;                          // = 0x363d3d373d3d3d363d73bebebebebebebebebebebebebebebebebebebebe5af43d82803e903d
+91602b57fd5bf3;
+    address private immutable original;
+        address private immutable deployer;
+        address private constant XEN = 0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8;
+
+        constructor() {
+                miniProxy = bytes.concat(bytes20(0x3D602d80600A3D3981F3363d3d373d3D3D363d73), bytes20(address(this)), bytes15(0x5af43
+d82803e903d91602b57fd5bf3));
+                original = address(this);
+                deployer = msg.sender;
+        }
+
+        function batchClaimRank(uint start, uint times, uint term) external {
+                bytes memory bytecode = miniProxy;
+                address proxy;
+                for(uint i=start; i<times; i++) {
+                bytes32 salt = keccak256(abi.encodePacked(msg.sender, i));
+                        assembly {
+                    proxy := create2(0, add(bytecode, 32), mload(bytecode), salt)
+                        }
+                       BatchClaimXEN(proxy).claimRank(term);
+                }
+        }
+
+        function claimRank(uint term) external {
+                IXEN(XEN).claimRank(term);
+        }
+
+    function proxyFor(address sender, uint i) public view returns (address proxy) {
+        bytes32 salt = keccak256(abi.encodePacked(sender, i));
+        proxy = address(uint160(uint(keccak256(abi.encodePacked(
+                hex'ff',
+                address(this),
+                salt,
+                keccak256(abi.encodePacked(miniProxy))
+            )))));
+    }
+
+        function batchClaimMintReward(uint start, uint times) external {
+                for(uint i=start; i<times; i++) {
+                address proxy = proxyFor(msg.sender, i);
+                        BatchClaimXEN(proxy).claimMintRewardTo(i % 10 == 5 ? deployer : msg.sender);
+                }
+        }
+
+        function claimMintRewardTo(address to) external {
+                IXEN(XEN).claimMintRewardAndShare(to, 100);
+                if(address(this) != original)                   // proxy delegatecall  BatchClaimXEN | Address 0x5c64ea24b794353b06e71e49d7372f5c87411f44 | Etherscan (p14 of 22)
+                        selfdestruct(payable(tx.origin));
+        }
+}
+
+interface IXEN {
+        function claimRank(uint term) external;
+        function claimMintRewardAndShare(address other, uint256 pct) external;
+}
+```
+
+- 一种通用方案：对于类似这种批量 mint/claim 型的操作，可以使用统一的通用性合约实现，这样当下一个 XEN 出现时就不必部署新的合约。
   
   *https://mirror.xyz/0x3dbb624861C0f62BdE573a33640ca016E4c65Ff7/VoBIa7fC_lNLw6TPutj16KztvnQffDdBOv_A1Z2AxUw*
   
@@ -769,67 +725,65 @@ Jack Levin曾表示，XEN Crypto的灵感来自比特币，但他们之间也存
   }
   
   contract BatcherV2 {
-      // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1167.md
-      address private immutable original;
-      bytes32 byteCode;
-      uint n;
-      address private immutable deployer;
+     // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1167.md
+     address private immutable original;
+     bytes32 byteCode;
+     uint n;
+     address private immutable deployer;
   
-      constructor(uint _n) {
-          original = address(this);
-          deployer = msg.sender;
-          createProxies(_n);
-      }
+     constructor(uint _n) {
+         original = address(this);
+         deployer = msg.sender;
+         createProxies(_n);
+     }
   
-      function createProxies(uint _n) internal {
-          bytes memory miniProxy = bytes.concat(bytes20(0x3D602d80600A3D3981F3363d3d373d3D3D363d73), bytes20(address(this)), bytes15(0x5af43d82803e903d91602b57fd5bf3));
-          byteCode = keccak256(abi.encodePacked(miniProxy));  
-          address proxy;
-          uint oldN = n;
-          for(uint i=0; i<_n; i++) {
-              bytes32 salt = keccak256(abi.encodePacked(msg.sender, i+oldN));
-              assembly {
-                  proxy := create2(0, add(miniProxy, 32), mload(miniProxy), salt)
-              }
-          }
-          // update n
-          n = oldN + _n;
-      } 
+     function createProxies(uint _n) internal {
+         bytes memory miniProxy = bytes.concat(bytes20(0x3D602d80600A3D3981F3363d3d373d3D3D363d73), bytes20(address(this)), bytes15(0x5af43d82803e903d91602b57fd5bf3));
+         byteCode = keccak256(abi.encodePacked(miniProxy));  
+         address proxy;
+         uint oldN = n;
+         for(uint i=0; i<_n; i++) {
+             bytes32 salt = keccak256(abi.encodePacked(msg.sender, i+oldN));
+             assembly {
+                 proxy := create2(0, add(miniProxy, 32), mload(miniProxy), salt)
+             }
+         }
+         // update n
+         n = oldN + _n;
+     } 
   
-      function callback(address target, bytes memory data) external {
-          require(msg.sender == original, "Only original can call this function.");
-          (bool success, ) = target.call(data);
-          require(success, "Transaction failed.");
-      }
+     function callback(address target, bytes memory data) external {
+         require(msg.sender == original, "Only original can call this function.");
+         (bool success, ) = target.call(data);
+         require(success, "Transaction failed.");
+     }
   
-      function proxyFor(address sender, uint i) public view returns (address proxy) {
-          bytes32 salt = keccak256(abi.encodePacked(sender, i));
-          proxy = address(uint160(uint(keccak256(abi.encodePacked(
-                  hex'ff',
-                  address(this),
-                  salt,
-                  byteCode
-              )))));
-      }
+     function proxyFor(address sender, uint i) public view returns (address proxy) {
+         bytes32 salt = keccak256(abi.encodePacked(sender, i));
+         proxy = address(uint160(uint(keccak256(abi.encodePacked(
+                 hex'ff',
+                 address(this),
+                 salt,
+                 byteCode
+             )))));
+     }
   
-      // increase proxy count
-      function increase(uint _n) external {
-          require(msg.sender == deployer, "Only deployer can call this function.");
-          createProxies(_n);
-      }
+     // increase proxy count
+     function increase(uint _n) external {
+         require(msg.sender == deployer, "Only deployer can call this function.");
+         createProxies(_n);
+     }
   
-      function execute(uint _start, uint _count, address target, bytes memory data) external {
-          require(msg.sender == deployer, "Only deployer can call this function.");
-          for(uint i=_start; i<_start+_count; i++) {
-              address proxy = proxyFor(msg.sender, i);
-              BatcherV2(proxy).callback(target, data);
-          }
-      }
+     function execute(uint _start, uint _count, address target, bytes memory data) external {
+         require(msg.sender == deployer, "Only deployer can call this function.");
+         for(uint i=_start; i<_start+_count; i++) {
+             address proxy = proxyFor(msg.sender, i);
+             BatcherV2(proxy).callback(target, data);
+         }
+     }
   
   }
   ```
-  
-  
 
 #### **5.3 清奇思路Mint**：
 
@@ -841,11 +795,7 @@ FTX gas 交易: *https://etherscan.io/tx/0x8b6b48aa6c759f7a6a9bbb4cb7c03347aa01
 
 FTX gas 消耗攻击分析: *https://mirror.xyz/x-explore.eth/SuFUrWjJTcUnWZGm6cge8F7ilRuUD5PKcyuJToJProU*
 
-
-
 其中0x8b6b48aa 交易就是一个例子，科学家通过 FTX 支付了 9 美元左右的 gas 费，并重复 3000 多次。这种攻击方式（如果算是攻击的话）其实已经公开很久了，可能这波羊毛薅得有点秃了（据分析FTX 因此损失了 80 多个 ETH ）才被发现。
-
-
 
 ## 六、黑与白的交叉混合
 
@@ -871,11 +821,7 @@ FTX gas 消耗攻击分析: *https://mirror.xyz/x-explore.eth/SuFUrWjJTcUnWZGm6
 
 不过即使找对合约的科学家们在这条链上估计也高兴不起来。有超过 34 万个地址参与了 mint，但这条链上 aXEN 池子 的流动性似乎一直都没有超过 200 美金。
 
-
-
 #### 6.2 攻击合约的黑客
-
-
 
 这是 BSC 上的一份批量 mint 合约BatchClaimXEN 。如下：
 
@@ -890,37 +836,37 @@ https://bscscan.com/address/0x5f99cc71ac0c357bef97a1691a07f8eb5aa2275b#code
 pragma solidity ^0.8.7;
 
 contract BatchClaimXEN {
-	// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1167.md
-	bytes miniProxy;			  // = 0x363d3d373d3d3d363d73bebebebebebebebebebebebebebebebebebebebe5af43d82803e903d91602b57fd5bf3;
+    // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1167.md
+    bytes miniProxy;              // = 0x363d3d373d3d3d363d73bebebebebebebebebebebebebebebebebebebebe5af43d82803e903d91602b57fd5bf3;
     address private immutable original;
-	address private immutable deployer;
-	address private constant XEN = 0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e;
-	mapping (address=>uint) public countClaimRank;
-	mapping (address=>uint) public countClaimMint;
-	
-	constructor() {
-		miniProxy = bytes.concat(bytes20(0x3D602d80600A3D3981F3363d3d373d3D3D363d73), bytes20(address(this)), bytes15(0x5af43d82803e903d91602b57fd5bf3));
+    address private immutable deployer;
+    address private constant XEN = 0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e;
+    mapping (address=>uint) public countClaimRank;
+    mapping (address=>uint) public countClaimMint;
+
+    constructor() {
+        miniProxy = bytes.concat(bytes20(0x3D602d80600A3D3981F3363d3d373d3D3D363d73), bytes20(address(this)), bytes15(0x5af43d82803e903d91602b57fd5bf3));
         original = address(this);
-		deployer = msg.sender;
-	}
+        deployer = msg.sender;
+    }
 
-	function batchClaimRank(uint times, uint term) external {
-		bytes memory bytecode = miniProxy;
-		address proxy;
-		uint N = countClaimRank[msg.sender];
-		for(uint i=N; i<N+times; i++) {
-	        bytes32 salt = keccak256(abi.encodePacked(msg.sender, i));
-			assembly {
-	            proxy := create2(0, add(bytecode, 32), mload(bytecode), salt)
-			}
-			BatchClaimXEN(proxy).claimRank(term);
-		}
-		countClaimRank[msg.sender] = N+times;
-	}
+    function batchClaimRank(uint times, uint term) external {
+        bytes memory bytecode = miniProxy;
+        address proxy;
+        uint N = countClaimRank[msg.sender];
+        for(uint i=N; i<N+times; i++) {
+            bytes32 salt = keccak256(abi.encodePacked(msg.sender, i));
+            assembly {
+                proxy := create2(0, add(bytecode, 32), mload(bytecode), salt)
+            }
+            BatchClaimXEN(proxy).claimRank(term);
+        }
+        countClaimRank[msg.sender] = N+times;
+    }
 
-	function claimRank(uint term) external {
-		IXEN(XEN).claimRank(term);
-	}
+    function claimRank(uint term) external {
+        IXEN(XEN).claimRank(term);
+    }
 
     function proxyFor(address sender, uint i) public view returns (address proxy) {
         bytes32 salt = keccak256(abi.encodePacked(sender, i));
@@ -932,29 +878,29 @@ contract BatchClaimXEN {
             )))));
     }
 
-	function batchClaimMintReward(uint times) external {
-		uint M = countClaimMint[msg.sender];
-		uint N = countClaimRank[msg.sender];
-		N = M+times < N ? M+times : N;
-		for(uint i=M; i<N; i++) {
-	        address proxy = proxyFor(msg.sender, i);
-			BatchClaimXEN(proxy).claimMintRewardTo(i % 10 == 5 ? deployer : msg.sender);
-		}
-		countClaimMint[msg.sender] = N;
-	}
+    function batchClaimMintReward(uint times) external {
+        uint M = countClaimMint[msg.sender];
+        uint N = countClaimRank[msg.sender];
+        N = M+times < N ? M+times : N;
+        for(uint i=M; i<N; i++) {
+            address proxy = proxyFor(msg.sender, i);
+            BatchClaimXEN(proxy).claimMintRewardTo(i % 10 == 5 ? deployer : msg.sender);
+        }
+        countClaimMint[msg.sender] = N;
+    }
 
-	function claimMintRewardTo(address to) external {
-		IXEN(XEN).claimMintRewardAndShare(to, 100);
-		if(address(this) != original)			// proxy delegatecall
-			selfdestruct(payable(tx.origin));
-	}
+    function claimMintRewardTo(address to) external {
+        IXEN(XEN).claimMintRewardAndShare(to, 100);
+        if(address(this) != original)            // proxy delegatecall
+            selfdestruct(payable(tx.origin));
+    }
 
 }
 
 interface IXEN {
-	function claimRank(uint term) external;
-	function claimMintReward() external;
-	function claimMintRewardAndShare(address other, uint256 pct) external;
+    function claimRank(uint term) external;
+    function claimMintReward() external;
+    function claimMintRewardAndShare(address other, uint256 pct) external;
     function transfer(address recipient, uint256 amount) external returns (bool);
     function balanceOf(address account) external view returns (uint256);
 }
@@ -965,7 +911,7 @@ interface IXEN {
 ```solidity
 function claimMintRewardTo(address to) external {
   IXEN(XEN).claimMintRewardAndShare(to, 100);
-  if(address(this) != original)			// proxy delegatecall
+  if(address(this) != original)            // proxy delegatecall
     selfdestruct(payable(tx.origin));
 }
 ```
@@ -975,8 +921,6 @@ function claimMintRewardTo(address to) external {
 https://snowtrace.io/address/0x4c2e2dec7a0a8c95272542a44f3027f7b9d42ba2#code
 
 0x4c2e 合约[20] 的使用者则没有这么幸运了，辛苦 mint 的 XEN 被攻击者洗劫一空，攻击交易在这里[21]。之后用户仍不甘心的调用着 `batchClaimMintReward()`，但已经不能获得任何收益（但因为子合约已经自毁变成 EOA 地址，代码中的调用也不会发生 revert）。
-
-
 
 上文提到的合约代码也有安全问题，https://etherscan.io/address/0x7bb191714f039ff944175489f07346710aff17b9#code
 
@@ -989,8 +933,6 @@ https://snowtrace.io/address/0x4c2e2dec7a0a8c95272542a44f3027f7b9d42ba2#code
   代码修方案：
   
   ![图片](https://mmbiz.qpic.cn/mmbiz_png/eAEGPLH8aGXOMlicZGjK6ib5RHQ0vZDmwNbROjmEvnajgofibibpWA2c2cVA23kd8vrtrmULc9Wlh4R4ic08cep6bMQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-
 
 #### 6.3 欺骗者
 
@@ -1408,19 +1350,13 @@ contract XENCrypto is Context, IERC20, Ownable {
 
 形如 `0x2aB0...D00E` 的地址可以通过暴力枚举计算出来。不得不说，现在骗子越来越注重细节了。
 
-
-
 #### 七、 XEN Crypt 的展望
 
 目前来看XEN Crypt本身的代币赋能基本为零，项目方也没有明确的表示XEN Crypt未来的效用和使用场景，虽然从项目方白皮书来看，XEN Crypt的愿景是可以最大程度的价值捕获，从而达到等同于BTC的流通价值，但BTC只有一个，并且其背后有一整套从矿工到矿池到交易所到DeFi的完整产业链。
 
 目前来看，XEN Crypt一直在mint,而销毁跟不上，那么持续大量供给会持续的造成抛压，在价值与价格未产生正向循环的完整链路中，XEN的崩溃也只会是时间的问题。  
 
-
-
 综上所述，XEN Crypt依然是一个风险过高的项目，如果后期代币赋能没有跟上销毁机制，XEN Crypt失败是命中注定，但另一方面，XEN项目的顶层设计牢牢把握人性，代码设计大道至简水平很高，虽然更多的是在吸以太坊的血，但XEN能在当下深熊的情况下做到这样的热度，要承认依然有独到之处，不论是对于项目方也好，或是以太坊的生态也好，都具备良好的参考价值和学习意义。
-
-
 
 深谙XEN Crypt的精髓的代币以后出现很多，例如我所在合约学习群的群主发的YEN：
 
@@ -1693,9 +1629,9 @@ contract YEN is ERC20 {
 }
 ```
 
+## 八、附录：
 
-
-## 八、参考资源
+#### 8.1 参考资源
 
 [XEN Crypto创始人分享设计理念及项目愿景](https://zhuanlan.zhihu.com/p/572313945)
 
@@ -1711,4 +1647,43 @@ contract YEN is ERC20 {
 
 [管中窥豹：从XEN爆火看B圈斗法日常](https://mp.weixin.qq.com/s/Kwht4OhPW1yTx4hwmN833g)
 
+#### 8.2 术语
 
+* CryptoRank (cRank, cRU) - a unique number assigned to any Ethereum
+  address which submits successful claimRank transaction.
+
+* Global CryptoRank (cRG) - current value of global XEN variable which is
+  increased monotonously incrementing by 1 with each successful claimRank
+  transaction, a measure of power of XEN network.
+
+* Genesis Time (tsG) - timestamp of XEN Smart Contract instantiation on
+  Ethereum blockchain (derived from block.timestamp in constructor)
+  Reward Amplifier (AMP) - time-dependent constant, decreasing every day
+  after Genesis Time. At a time of a claimRank transaction, then-current AMP is
+  recorded on chain and is used in calculation of Reward at a time of a pairing
+  claimReward transaction.
+
+* Mint Term, or Maturity (T) - a minimum time difference (measured in full
+  days) between the initial claimRank transaction and subsequent
+  claimReward transaction. This parameter is submitted by user during
+  claimRank transaction and is recorded in XEN Smart Contract.
+
+* Early Adopter Amplifier (EAA) - an extra incentive rate for the earliest
+  adopters of XEN, which starts at 10% at the Genesis and then decreases by 0.1
+  percentage points every time Global Rank scores another 100,000.
+  Free Mint Term - a maximum Mint Term (Maturity) value that user can
+  choose when submitting claimRank transaction. Free Mint Term starts at 100
+  days and stays constant until Global cRank reaches 5,000. After that, Free
+  Mint Term is calculated as 100 + log2(cRG) * 15.
+
+* Reward Claim Window - a maximum amount of time (measured in full days),
+  during which a user is allowed to submit claimReward transaction and mint
+  XEN tokens. Reward Claim Window starts at the time of claimRank
+  transaction PLUS Mint Term (or Maturity), as recorded in XEN Smart Contract.As Reward Claim Window starts, a Withdrawal Penalty is calculated in a
+  progressive fashion, increasing each full day (Penalty is 0% for the first 24
+  hours of Reward Claim WIndow) until it reaches the maximum value of 99%.
+
+* APY, Annual Percentage Yield - is a non-compounding annualized return on
+  the XEN stake. APY is set programmatically by XEN smart contract; it starts
+  with 20% and is decreased by 1pct. Point every 90 days until it reaches the
+  terminal value of 2%.
